@@ -1,4 +1,4 @@
-import { createAI } from 'youaicostom';
+import { createAI } from 'youaicostum';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
