@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "create-ai-app",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1.js"
+    }
+  ],
+  "env": {
+    "FIREBASE_ADMIN_KEY_JSON": "@firebase-admin-key-json"
+  }
+}
