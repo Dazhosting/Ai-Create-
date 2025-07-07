@@ -1,4 +1,4 @@
-import { chatAI } from 'youaicostom';
+import { chatAI } from 'youaicostum';
 
 export default async function handler(req, res) {
   const { text, key } = req.query;
