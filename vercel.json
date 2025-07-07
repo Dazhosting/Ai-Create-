@@ -12,8 +12,5 @@
       "src": "/api/(.*)",
       "dest": "/api/$1.js"
     }
-  ],
-  "env": {
-    "FIREBASE_ADMIN_KEY_JSON": "@firebase-admin-key-json"
-  }
+  ]
 }
