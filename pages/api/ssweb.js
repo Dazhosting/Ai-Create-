@@ -2,12 +2,20 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ success: false, error: 'Method not allowed' });
+    return res.status(405).json({
+      creator: "Vercel team",
+      success: false,
+      error: 'Method not allowed'
+    });
   }
 
   const { url } = req.query;
   if (!url || !url.startsWith('http')) {
-    return res.status(400).json({ success: false, error: 'Invalid or missing URL' });
+    return res.status(400).json({
+      creator: "Vercel team",
+      success: false,
+      error: 'Invalid or missing URL' 
+    });
   }
 
   const headers = {
@@ -43,12 +51,14 @@ export default async function handler(req, res) {
     );
 
     return res.status(200).json({
+      creator: "Vercel team",
       success: true,
       id: response.data.id,
       fileUrl: response.data.fileUrl
     });
   } catch (error) {
     return res.status(500).json({
+      creator: "Vercel team",
       success: false,
       error: error.message
     });
